@@ -1,3 +1,48 @@
+"""
+build_bad_epochs.py — Compare manual EEGLAB bad-epoch rejection with Brainlife pipeline output
+================================================================================================
+
+PURPOSE
+-------
+The original Latinus et al. (2015) dataset was preprocessed manually in EEGLAB.
+Each subject has a text-based AnalysisSheet recording which epochs were rejected
+at each stage (pre-ICA BTmark, post-ICA artifact detection).
+
+This script re-processes that same dataset through an automated Brainlife pipeline.
+The goal is to verify that the Brainlife pipeline's bad-epoch detection agrees with
+the original manual rejection, and to document any differences.
+
+WHAT IT DOES
+------------
+1. Reads each subject's EEGLAB AnalysisSheet (plain text) and parses:
+   - Pre-ICA BTmark rejection: epoch indices and iteration count
+   - Post-ICA artifact rejection: epoch indices and final trial count
+2. Reads each subject's Brainlife bad-epoch outputs (events.tsv files, 0-based indices)
+   for up to two passes ("first" and "second"), labelling what each pass represents
+   (pre-ICA, post-ICA, or intermediate) based on the number of BTmark iterations.
+3. Produces three output files:
+   - bad_epochs_summary.tsv  — one row per subject, counts and pass labels
+   - bad_epochs_detail.tsv   — one row per rejection event, with epoch index lists
+   - bad_epochs.xlsx         — colour-coded Excel workbook with both sheets
+
+NOTES ON INDEX CONVENTIONS
+---------------------------
+- EEGLAB AnalysisSheets use 1-based epoch indices.
+- Brainlife events.tsv uses 0-based indices.
+- The detail output adds +1 to Brainlife indices so both sources are on the same scale.
+
+EDGE CASES HANDLED
+------------------
+- S06: no pre-ICA BTmark recorded → Brainlife "first" pass = post-ICA directly
+- S03: two BTmark iterations → Brainlife "first"/"second" = iter1/iter2 (both pre-ICA)
+- S24: empty analysis sheet → labelled "no analysis sheet available"
+- Subjects with Brainlife data but no sheet, or vice versa, are both included
+
+DEPENDENCIES
+------------
+    pip install openpyxl
+"""
+
 import os, re
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
