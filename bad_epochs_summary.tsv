@@ -1,0 +1,23 @@
+subject	pre_ica_n_passes	pre_ica_n_rejected	pre_ica_trials_left	post_ica_n_rejected	post_ica_trials_left	bl_first_n	bl_second_n	bl_first_meaning	bl_second_meaning	notes
+S01	1	67	409	53	356	67	53	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S02	1	40	423	78	345	40	78	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S03	2	61	410	73	337	50	61	pre-ICA BTmark iter1 (intermediate)	pre-ICA BTmark iter2 (final applied)	2 BTmark iterations — rejected once using final list
+S04	1	37	395	54	341	37	54	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S05	1	34	443	48	395	34	48	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S06	0	?	472	30	442	30	N/A	post-ICA artifact rejection	N/A	NO BTmark recorded
+S08	1	14	456	23	433	14	23	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S09	1	16	428	7	428	16	7	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S10	1	21	453	69	384	21	69	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S11	1	42	434	35	399	42	35	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S12	1	10	467	30	437	10	30	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S14	1	31	438	47	391	31	47	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S16	1	18	454	47	407	18	47	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S17	1	23	361	35	326	23	35	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S18	1	25	451	38	413	25	38	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S19	1	14	454	45	409	14	45	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S20	1	11	449	32	417	11	32	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S22	1	21	416	60	356	21	60	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S23	1	34	421	78	343	34	78	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S24	0	?	?	?	?	13	34	unknown (no analysis sheet)	unknown (no analysis sheet)	no analysis sheet available
+S25	1	12	465	35	430	12	35	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
+S26	1	21	385	41	344	21	41	pre-ICA bad trials	post-ICA artifact rejection (re-indexed)	normal
